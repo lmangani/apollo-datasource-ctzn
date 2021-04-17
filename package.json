@@ -1,6 +1,6 @@
 {
   "name": "apollo-datasource-ctzn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "DataSource interface for CTZN",
   "main": "index.js",
   "repository": "lmangani/apollo-datasource-ctzn",
