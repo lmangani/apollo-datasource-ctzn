@@ -1,10 +1,10 @@
 {
-  "name": "apollo-datasource-givefood",
-  "version": "0.0.0-semantic-release",
-  "description": "DataSource interface for GiveFood",
+  "name": "apollo-datasource-ctzn",
+  "version": "0.0.1",
+  "description": "DataSource interface for CTZN",
   "main": "index.js",
-  "repository": "notrab/apollo-datasource-givefood",
-  "author": "Jamie Barton <jamie@launchmade.com>",
+  "repository": "lmangani/apollo-datasource-ctzn",
+  "author": "Lorenzo Mangani <lorenzo.mangani@gmail.com>",
   "license": "MIT",
   "scripts": {
     "test": "jest"
@@ -13,11 +13,11 @@
     "apollo",
     "datasource",
     "data source",
-    "givefood",
-    "food banks"
+    "ctzn",
+    "ctznry"
   ],
   "dependencies": {
-    "apollo-datasource-rest": "0.9.5"
+    "apollo-datasource-rest": "^0.12.0"
   },
   "files": [
     "index.js"
