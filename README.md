@@ -41,3 +41,28 @@ class Followers extends CTZNataSource {
   }
 }
 ```
+
+## Example
+```js
+const { ApolloServer } = require('apollo-server');
+const typeDefs = require('./schema');
+const { createStore } = require('./utils');
+
+const CTZNDataSource = require('apollo-datasource-ctzn');
+
+const store = createStore();
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  dataSources: () => ({
+    ctzn: new CTZNDataSource(),
+  }),
+});
+
+server.listen().then(() => {
+  console.log(`
+    Server is running!
+  `);
+});
+```
