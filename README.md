@@ -1,13 +1,12 @@
-# apollo-datasource-givefood
+# apollo-datasource-ctzn
 
-🥫 Apollo [data source](https://www.apollographql.com/docs/apollo-server/features/data-sources) for [GiveFood API](https://www.givefood.org.uk/api).
+🥫 Apollo [data source](https://www.apollographql.com/docs/apollo-server/features/data-sources) for [CTZN](https://www.ctznry.com).
 
-[Donate to Food Banks](https://www.givefood.org.uk) | [Find Nearby Food Banks](https://www.givefood.org.uk/needs)
 
 ## Install
 
 ```bash
-npm i apollo-datasource-givefood
+npm i apollo-datasource-ctzn
 ```
 
 ## Usage
@@ -15,29 +14,29 @@ npm i apollo-datasource-givefood
 The simplest way to get going is by using the DataSource directly.
 
 ```js
-import { GiveFoodDataSource } from 'apollo-datasource-givefood';
+import { CTZNDataSource } from 'apollo-datasource-ctzn';
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({
-    givefood: new GiveFoodDataSource(),
+    ctzn: new CTZNDataSource(),
   }),
 });
 ```
 
-An alternative is subclassing `GiveFoodDataSource`.
+An alternative is subclassing `CTZNDataSource`.
 
 ```js
-import { GiveFoodDataSource } from 'apollo-datasource-givefood';
+import { CTZNDataSource } from 'apollo-datasource-ctzn';
 
-class FoodBanks extends GiveFoodDataSource {
+class Followers extends CTZNataSource {
   constructor() {
     super();
     this.baseURL = '...';
   }
 
-  getFoodBankBySlug(slug) {
+  getFollowersById(slug) {
     return this.getBySlug(slug);
   }
 }
